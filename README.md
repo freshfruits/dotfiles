@@ -2,6 +2,8 @@
 
 I will try generally to update this as much as possible.
 
+![dotfile](/images/test.png)
+
 > "Welcome to world of madness." said the **Developer**<br>
 > “But I don’t want to go among mad people," **Visitor** remarked.<br>
 > "Oh, you can’t help that," said the **Developer**: "we’re all mad here. I’m mad. You’re mad."<br>
