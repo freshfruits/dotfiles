@@ -9,4 +9,5 @@ alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 
 alias shutdown="sudo shutdown now"
+alias reboot="sudo reboot now"
 alias update="sudo pacman -Syu"
