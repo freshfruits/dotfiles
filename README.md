@@ -1,6 +1,6 @@
 <h3> dotfiles </h3>
 
-I will try generally to update this as much as possible.
+I will try to generally update this from time to time. 
 
 ![dotfile](/images/test.png)
 
