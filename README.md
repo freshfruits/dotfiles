@@ -1,8 +1,9 @@
-# .dotfiles
-
 ![dotfile](/images/test.png)
 
+# .dotfiles
+
 I will try to generally update this from time to time. 
+
 Its current structure is of a Desktop Folder and a Laptop folder. Due to I use something difference on both type of machines. Both folders include i3wm and i3gaps, and have links to the necessary packages for it to work out of the box. 
 
 > "Welcome to the parallel universe of madness." said the **Developer**<br>
@@ -11,17 +12,25 @@ Its current structure is of a Desktop Folder and a Laptop folder. Due to I use s
 > "How do you know I’m mad?" said the **Visitor**.<br>
 > "You must be," said the **Developer**, "or you wouldn’t have come here.”<br>
 
-<h5> You may be wondering, what does this repo actually contain?</h5>
+### You may be wondering, what does this repo actually contain?
 
  > "What does this very good looking dotfile repo contain?" asked the **Visitor**<br>
  > "Well.. Let me take you on a journey to the awesome list of features!" said the **Developer**
 
-<h5> Feature list: </h5>
+### Feature list:
 
-    * .config/i3/config (
-    * Maybe i3Status.conf
-
- <h4> Huge thanks and much appreciate </h4>
+* Desktop
+     * Config: Desktop/.config/i3/config
+     * Status bar: Desktop/.config/i3blocks/i3blocks.conf
+     * Dots: Desktop/.dots
+     
+* Laptop (Yet to upload)
+ 	* Config: Laptop/.config/i3/config
+	* Status bar: Laptop/.config/i3blocks/i3blocks.conf
+	* Dots: Laptop/.dots
+	* Git: Laptop/.git
+	
+#### Huge thanks and much appreciate
   * Simon
   * Kristian
   * Paul
