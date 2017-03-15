@@ -70,12 +70,12 @@ cd ~/dotfiles
 git clone https://github.com/freshfruits/dotfiles
 echo
 echo "copying .Xresources"
-cp ~/dotfiles/dotfiles/desktop/.dots/.Xresources ~/.Xresources
+cp ~/dotfiles/dotfiles/desktop/.Xresources ~/.Xresources
 echo "copying .bashrc"
-cp ~/dotfiles/dotfiles/desktop/.dots/.bashrc ~/.bashrc
+cp ~/dotfiles/dotfiles/desktop/.bashrc ~/.bashrc
 echo "copying .xinitrc"
 echo
-cp ~/dotfiles/dotfiles/desktop/.dots/.xinitrc ~/.xinitrc
+cp ~/dotfiles/dotfiles/desktop/.xinitrc ~/.xinitrc
 
 # Installing i3blocks
 yaourt install i3blocks
