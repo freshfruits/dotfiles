@@ -33,7 +33,7 @@ configure_setup() {
 	cp ~/dotfiles/desktop/.bashrc ~/.bashrc
 	cp ~/dotfiles/desktop/.xinitrc ~/.xinitrc
 	cp ~/dotfiles/desktop/.bash_aliases ~/.bash_aliases
-	cp ~/dotfiles/desktop/.config/i3/config ~/.config/i3/.config
+	cp ~/dotfiles/desktop/.config/i3/config ~/.config/i3/config
 	cp ~/dotfiles/desktop/.config/i3blocks/i3blocks.conf ~/.config/i3/i3blocks.conf
 	rm -fr $DIR_NAME
 }
