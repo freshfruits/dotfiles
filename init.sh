@@ -49,19 +49,16 @@ install_aur_packages() {
 
 configure_setup() {
        # Variables
-       USR='~'
-       DOTFILES='~/dotfiles/desktop'
-       DIR_NAME='~/dotfiles'
+       DIR_NAME='dotfiles'
 
-	cd $USER_HOME
+	cd $HOME
 	git clone https://github.com/freshfruits/dotfiles
-	cp $DOTFILES/.Xresources $USR/.Xresources
-	cp $DOTFILES/.bashrc $USR/.bashrc
-	cp $DOTFILES/.xinitrc $USR/.xinitrc
-	cp $DOTFILES/.bash_aliases $USR/.bash_aliases
-	cp $DOTFILES/.config/i3/config $USR/.config/i3/.config
-	cp $DOTFILES/.config/i3blocks/i3blocks.conf $USR/.config/i3/i3blocks.conf
-	cd $USER_HOME
+	cp ~/dotfiles/desktop/.Xresources ~/.Xresources
+	cp ~/dotfiles/desktop/.bashrc ~/.bashrc
+	cp ~/dotfiles/desktop/.xinitrc ~/.xinitrc
+	cp ~/dotfiles/desktop/.bash_aliases ~/.bash_aliases
+	cp ~/dotfiles/desktop/.config/i3/config ~/.config/i3/.config
+	cp ~/dotfiles/desktop/.config/i3blocks/i3blocks.conf ~/.config/i3/i3blocks.conf
 	rm -fr $DIR_NAME
 }
 
