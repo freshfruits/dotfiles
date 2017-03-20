@@ -18,6 +18,9 @@ export GIT_PS1_SHOWUNTRACKEDFILES=1
 
 export PS1='\[\e]0;\w\a\]\[\033[31m\][\[\033[0;92m\]\W\[\033[31m\]]\[\033[0;35m\]$(__git_ps1) \[\033[2;33m\]:\[\033[00m\] '
 
-alias shutdown="sudo shutdown now"
-alias reboot="sudo reboot now"
-alias update="sudo pacman -Syu"
+if [ -f ~/.bash_aliases ]; then
+	. ~/.bash_aliases
+fi
+
+# Scripts
+export PATH=$PATH:~/.bin
