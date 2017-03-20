@@ -1,58 +1,80 @@
 #!/usr/bin/env bash
 
-# Terminal wipe
-clear
+# This script is mainly set for Arch_Linux but can be configured to suit any linux system.
 
-# LOGO!
-function logo() {
-echo '			        Well.. Its something, isnt it?..  '
+clear
+echo "======================="
+echo "Jacob's Setup Script"
+echo "======================="
+
+configure () {
+        echo "Updating System"
+        update_system
+
+        echo "Installing additional packages"
+        install_packages
+
+        echo "Installling AUR packages"
+        install_aur_packages
+
+        echo "Configurating Dotfiles"
+        configure_setup
+
+        echo "Reboot"
+        reboot_sequence
 
 }
 
-echo
-echo
-logo
-echo
-echo
+update_system() {
+        sudo pacman -Syu
+}
 
-# Be ready
-echo
-echo "Please be ready to click y or no"
-echo
+install_packages() {
+        local packages=''
 
-echo "Installing yaourt"
-sudo pacman -S yaourt
+        # Git packages
+        packages+='git'
 
-echo "Installing git"
-sudo pacman -S git
+       sudo  pacman -S $packages
+}
 
-# DOTFILES Setup
-echo "Beginning dotfiles setup"
-mkdir ~/dotfiles
-cd ~/dotfiles
-git clone https://github.com/freshfruits/dotfiles
-echo
-echo "copying .Xresources"
-cp ~/dotfiles/dotfiles/desktop/.Xresources ~/.Xresources
-echo "copying .bashrc"
-cp ~/dotfiles/dotfiles/desktop/.bashrc ~/.bashrc
-echo "copying .xinitrc"
-echo
-cp ~/dotfiles/dotfiles/desktop/.xinitrc ~/.xinitrc
+install_aur_packages() {
+        local yaourt_packages=''
 
-# Installing i3blocks
-yaourt install i3blocks
+	# i3blocks
+	yaourt_packages+='i3blocks'
 
-# End of Dotfiles
-echo
-echo "Removing dotfiles folder"
-echo
-rm -fr ~/dotfiles
+	yaourt $yaourt_packages
+}
 
-# EOF
-echo 
-echo
-echo "EOF" 
-echo "Thank you, please come again."
-echo
-echo
+configure_setup() {
+       # Variables
+       USR='~'
+       DOTFILES='~/dotfiles/desktop'
+       DIR_NAME='~/dotfiles'
+
+	cd $USER_HOME
+	git clone https://github.com/freshfruits/dotfiles
+	cp $DOTFILES/.Xresources $USR/.Xresources
+	cp $DOTFILES/.bashrc $USR/.bashrc
+	cp $DOTFILES/.xinitrc $USR/.xinitrc
+	cp $DOTFILES/.bash_aliases $USR/.bash_aliases
+	cp $DOTFILES/.config/i3/config $USR/.config/i3/.config
+	cp $DOTFILES/.config/i3blocks/i3blocks.conf $USR/.config/i3/i3blocks.conf
+	cd $USER_HOME
+	rm -fr $DIR_NAME
+}
+
+# Sleeps 10 seconds then reboot the system, just to make sure.
+reboot_sequence() {
+        sleep 10
+        sudo reboot now
+}
+
+# Main call
+if [ -z $1 ]
+then
+        configure
+else
+        exit
+fi
