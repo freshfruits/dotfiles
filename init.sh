@@ -11,12 +11,6 @@ configure () {
         echo "Updating System"
         update_system
 
-        echo "Installing additional packages"
-        install_packages
-
-        echo "Installling AUR packages"
-        install_aur_packages
-
         echo "Configurating Dotfiles"
         configure_setup
 
@@ -27,24 +21,6 @@ configure () {
 
 update_system() {
         sudo pacman -Syu
-}
-
-install_packages() {
-        local packages=''
-
-        # Git packages
-        packages+='git'
-
-       sudo  pacman -S $packages
-}
-
-install_aur_packages() {
-        local yaourt_packages=''
-
-	# i3blocks
-	yaourt_packages+='i3blocks'
-
-	yaourt $yaourt_packages
 }
 
 configure_setup() {
