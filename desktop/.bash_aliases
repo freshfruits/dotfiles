@@ -8,6 +8,8 @@ alias development="cd ~/Development/"
 alias dev="cd ~/Development/"
 alias devc="cd ~/Development/C/"
 
+alias github="cd ~/Development/GitHub/"
+
 alias downloads="cd ~/Downloads/"
 alias dload="cd ~/Downloads/"
 alias images="cd ~/images/"
