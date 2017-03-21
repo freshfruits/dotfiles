@@ -65,9 +65,12 @@ floating_modifier $mod
 # start ranger
 bindsym $mod+b exec urxvt -e ranger
 
+# Chinese
+exec --no-startup-id fcitx
+
 # i3lock
-#bindsym $mod+l exec i3lock -i ~/images/screenshots/screenshot_2017_02_23_13_45_16.png -u -f -p win
-#exec xautolock -time 10 -locker "i3lock -i ~/images/screenshots/screenshot_2017_02_23_13_45_16.png -u -f -p win"
+bindsym $mod+l exec i3lock -i ~/images/i3lock/madcat2.png
+exec xautolock -time 10 -locker "i3lock -i ~/images/i3lock/madcat2.png"
 
 # start a terminal
 bindsym $mod+Return exec urxvt
