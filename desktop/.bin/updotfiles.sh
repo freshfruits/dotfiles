@@ -19,16 +19,16 @@ dotfiles () {
 
 copy_dotfiles () {
 	cd $HOME
-	cp ~/.bashrc ~/Development/GitHub/dotfiles/desktop/.bashrc
-	cp ~/.bash_aliases ~/Development/GitHub/dotfiles/desktop/.bash_aliases
-	cp ~/.Xresources ~/Development/GitHub/dotfiles/desktop/.Xresources
-	cp ~/.xinitrc ~/Development/GitHub/dotfiles/desktop/.xinitrc
-	cp ~/.config/i3/config ~/Development/GitHub/dotfiles/desktop/.config/i3/config
-	cp ~/.config/i3/i3blocks.conf ~/Development/GitHub/dotfiles/desktop/.config/i3blocks/i3blocks.conf
+	cp $HOME/.bashrc $HOME/Development/GitHub/dotfiles/desktop/.bashrc
+	cp $HOME/.bash_aliases $HOME/Development/GitHub/dotfiles/desktop/.bash_aliases
+	cp $HOME/.Xresources $HOME/Development/GitHub/dotfiles/desktop/.Xresources
+	cp $HOME/.xinitrc $HOME/Development/GitHub/dotfiles/desktop/.xinitrc
+	cp $HOME/.config/i3/config $HOME/Development/GitHub/dotfiles/desktop/.config/i3/config
+	cp $HOME/.config/i3/i3blocks.conf $HOME/Development/GitHub/dotfiles/desktop/.config/i3blocks/i3blocks.conf
 }
 
 git_commit () {
-	cd ~/Development/GitHub/dotfiles/
+	cd $HOME/Development/GitHub/dotfiles/
 	git add .
 	git commit -m "AUTOMATIC : updated dotfiles"
 	git push origin master
