@@ -29,12 +29,12 @@ configure_setup() {
 
 	cd $HOME
 	git clone https://github.com/freshfruits/dotfiles
-	cp ~/dotfiles/desktop/.Xresources ~/.Xresources
-	cp ~/dotfiles/desktop/.bashrc ~/.bashrc
-	cp ~/dotfiles/desktop/.xinitrc ~/.xinitrc
-	cp ~/dotfiles/desktop/.bash_aliases ~/.bash_aliases
-	cp ~/dotfiles/desktop/.config/i3/config ~/.config/i3/config
-	cp ~/dotfiles/desktop/.config/i3blocks/i3blocks.conf ~/.config/i3/i3blocks.conf
+	cp $HOME/dotfiles/desktop/.Xresources $HOME/.Xresources
+	cp $HOME/dotfiles/desktop/.bashrc $HOME/.bashrc
+	cp $HOME/dotfiles/desktop/.xinitrc $HOME/.xinitrc
+	cp $HOME/dotfiles/desktop/.bash_aliases $HOME/.bash_aliases
+	cp $HOME/dotfiles/desktop/.config/i3/config $HOME/.config/i3/config
+	cp $HOME/dotfiles/desktop/.config/i3blocks/i3blocks.conf $HOME/.config/i3/i3blocks.conf
 	rm -fr $DIR_NAME
 }
 
